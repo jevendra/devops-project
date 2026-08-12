@@ -1,0 +1,1 @@
+function testApp(){document.getElementById("message").textContent="Application is running successfully on Tomcat! ✅";}

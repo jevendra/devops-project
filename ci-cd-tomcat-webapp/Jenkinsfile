@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') { steps { checkout scm } }
+        stage('Build') { steps { sh 'mvn clean package' } }
+        stage('Test') { steps { sh 'test -f target/ci-cd-tomcat-webapp.war' } }
+        stage('Deploy to Tomcat') {
+            steps {
+                sh 'sudo cp target/ci-cd-tomcat-webapp.war /opt/tomcat/webapps/'
+            }
+        }
+    }
+    post {
+        success { echo 'CI/CD deployment to Tomcat completed successfully! 🚀' }
+        failure { echo 'Pipeline failed. Check Console Output.' }
+    }
+}
