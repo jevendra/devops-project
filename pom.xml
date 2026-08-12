@@ -11,7 +11,7 @@
 
     <artifactId>ci-cd-tomcat-webapp</artifactId>
 
-    <version>1.0</version>
+    <version>3.4.0</version>
 
     <packaging>war</packaging>
 
