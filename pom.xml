@@ -1,4 +1,4 @@
-<?xml version="3.4.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -8,10 +8,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.devops</groupId>
-
     <artifactId>ci-cd-tomcat-webapp</artifactId>
-
-    <version>3.4.0</version>
+    <version>1.0</version>
 
     <packaging>war</packaging>
 
@@ -23,6 +21,22 @@
 
     <build>
         <finalName>ci-cd-tomcat-webapp</finalName>
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+            </plugin>
+
+        </plugins>
     </build>
 
 </project>
